@@ -1,6 +1,6 @@
 .header-img {
   width: 200px;
-  margin: 0 55px 0 25px;
+  margin: 0 65px 0 25px;
 }
 .card {
   margin-bottom: 15px;
@@ -8,4 +8,10 @@
 .list-group-item.active {
   background-color: #7d9efd;
   border-color: #7d9efd;
+}
+.l-50 {
+  margin-left: 50px;
+}
+.l10 {
+  margin-left: 10px;
 }
