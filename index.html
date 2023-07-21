@@ -14,7 +14,7 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
-    
+
     <link rel="stylesheet" href="css/datashark.css" />
     <link href="img/favicon.png" rel="icon" />
     <script src="js/datashark.js"></script>
@@ -30,19 +30,24 @@
           <li class="nav-item">
             <button
               class="btn btn-primary l-50"
-              data-bs-toggle="modal" data-bs-target="#add-connection"
-              >Add Connection</button>
+              data-bs-toggle="modal"
+              data-bs-target="#connectionformmodal"
+            >
+              Add Connection
+            </button>
           </li>
           &nbsp; &nbsp;
           <li class="nav-item">
             <button
               class="btn btn-primary l-10"
-              data-bs-toggle="modal" data-bs-target="#add-source"
-              >Add Source</button>
+              data-bs-toggle="modal"
+              data-bs-target="#sourceformmodal"
+            >
+              Add Source
+            </button>
           </li>
         </ul>
       </div>
-
     </header>
     <div class="container-fluid">
       <div class="container-fluid">
@@ -198,7 +203,6 @@
                         </tr>
                       </tbody>
                     </table>
-                    
                   </div>
                 </div>
               </div>
@@ -206,28 +210,21 @@
           </div>
         </div>
       </div>
-
-      <!--    <div class="row">
-        <div class="col-12">
-          <h1>My First Bootstrap Page</h1>
-          <p>This is some text.</p>
-        </div>
-      </div>-->
     </div>
-    <div class="modal" tabindex="-1" id="add-connection">
+    <div class="modal" tabindex="-1" id="connectionformmodal">
       <div class="modal-dialog">
         <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Add Connection</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <form>
+          <form id="connectionform">
+            <div class="modal-header">
+              <h5 class="modal-title">Add Connection</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
               <div class="form-group">
                 <label for="connection-title">Title</label>
                 <input
@@ -271,35 +268,41 @@
                   placeholder="Password"
                 />
               </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                onclick="save('connectionform')"
+              >
+                Save changes
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
-    <div class="modal" tabindex="-1" id="add-source">
+    <div class="modal" tabindex="-1" id="sourceformmodal">
       <div class="modal-dialog">
         <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Add Srouce</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <form>
+          <form id="sourceform">
+            <div class="modal-header">
+              <h5 class="modal-title">Add Srouce</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
               <div class="form-group">
                 <label for="source-title">Title</label>
                 <input
@@ -343,18 +346,24 @@
                   placeholder="Password"
                 />
               </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                onclick="save('sourceform')"
+              >
+                Save changes
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
