@@ -17,6 +17,7 @@
     
     <link rel="stylesheet" href="css/datashark.css" />
     <link href="img/favicon.png" rel="icon" />
+    <script src="js/datashark.js"></script>
   </head>
   <body>
     <header
@@ -27,22 +28,17 @@
       <div class="navbar-nav-scroll">
         <ul class="navbar-nav bd-navbar-nav flex-row">
           <li class="nav-item">
-            <a
+            <button
               class="btn btn-primary l-50"
-              href="/"
-              onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');"
-              >Add connection</a
-            >
+              data-bs-toggle="modal" data-bs-target="#add-connection"
+              >Add Connection</button>
           </li>
-          &nbsp;
-          &nbsp;
+          &nbsp; &nbsp;
           <li class="nav-item">
-            <a
+            <button
               class="btn btn-primary l-10"
-              href="/docs/4.0/getting-started/introduction/"
-              onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');"
-              >Add Source</a
-            >
+              data-bs-toggle="modal" data-bs-target="#add-source"
+              >Add Source</button>
           </li>
         </ul>
       </div>
@@ -218,7 +214,151 @@
         </div>
       </div>-->
     </div>
+    <div class="modal" tabindex="-1" id="add-connection">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Add Connection</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="connection-title">Title</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="connection-title"
+                  name="connection-title"
+                  aria-describedby="connection-title"
+                  placeholder="Enter connection title"
+                />
+              </div>
+              <div class="form-group">
+                <label for="connection-string">Connection String</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="connection-string"
+                  name="connection-string"
+                  aria-describedby="connection-string"
+                  placeholder="Enter Connection String"
+                />
+              </div>
+              <div class="form-group">
+                <label for="connection-user">UID</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="connection-user"
+                  name="connection-user"
+                  aria-describedby="connection-user"
+                  placeholder="Enter connection user"
+                />
+              </div>
+              <div class="form-group">
+                <label for="inputPassword">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="inputPassword"
+                  name="inputPassword"
+                  placeholder="Password"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" tabindex="-1" id="add-source">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Add Srouce</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="source-title">Title</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="source-title"
+                  name="source-title"
+                  aria-describedby="source-title"
+                  placeholder="Enter source title"
+                />
+              </div>
+              <div class="form-group">
+                <label for="source-string">source Source</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="source-string"
+                  name="source-string"
+                  aria-describedby="source-string"
+                  placeholder="Enter source String"
+                />
+              </div>
+              <div class="form-group">
+                <label for="source-user">ID</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="source-user"
+                  name="source-user"
+                  aria-describedby="source-user"
+                  placeholder="Enter source user"
+                />
+              </div>
+              <div class="form-group">
+                <label for="inputPassword">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="inputPassword"
+                  name="inputPassword"
+                  placeholder="Password"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="js/datashark.js"></script>
+  <script src="js/chartset.js"></script>
 </html>
